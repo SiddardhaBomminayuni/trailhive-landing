@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Design tokens — sampled from the Figma "Saas — Nature Company" frame (1440px) */
+@theme {
+  --font-sans: "Lato", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-alt: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+  --color-forest: #232e26; /* dark background / dark text */
+  --color-mint: #d9efde; /* light background / light text */
+  --color-mint-muted: #b5c8b9; /* partner logos */
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-forest font-sans text-mint antialiased;
+    overflow-x: clip;
+  }
+  img {
+    user-select: none;
+  }
+  ::selection {
+    @apply bg-mint text-forest;
+  }
+}
+
+/* Buttons — shared shape, transition + hover lift */
+@utility btn {
+  @apply inline-flex items-center justify-center rounded-full px-5 text-base leading-6 whitespace-nowrap transition-[background-color,color,box-shadow,transform] duration-300 ease-out-soft hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+@layer components {
+  /* 1200px content column (120px gutters on a 1440px screen) */
+  .container-x {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-5;
+  }
+  /* Rounded mint "card" sections that sit on the forest background */
+  .panel {
+    @apply rounded-[28px] bg-mint text-forest lg:rounded-[40px];
+  }
+  .eyebrow {
+    @apply text-sm leading-5 tracking-[0.08em] uppercase;
+  }
+
+  .btn-mint {
+    @apply btn bg-mint text-forest hover:bg-white hover:shadow-[0_8px_24px_-8px_rgba(217,239,222,0.6)] focus-visible:outline-mint;
+  }
+  .btn-forest {
+    @apply btn bg-forest text-mint hover:bg-[#34443a] hover:shadow-[0_8px_24px_-8px_rgba(35,46,38,0.6)] focus-visible:outline-forest;
+  }
+  .btn-outline-forest {
+    @apply btn border border-forest text-forest hover:bg-forest hover:text-mint focus-visible:outline-forest;
+  }
+  .btn-outline-mint {
+    @apply btn border border-mint text-mint hover:bg-mint hover:text-forest focus-visible:outline-mint;
+  }
+
+  /* Animated underline for text links */
+  .link-underline {
+    @apply bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 ease-out-soft hover:bg-[length:100%_1px];
+  }
+
+  /* Scroll reveal (toggled by useReveal) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s var(--ease-out-soft),
+      transform 0.8s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-zoom {
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+      opacity 1s var(--ease-out-soft),
+      transform 1.2s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal-zoom.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Partner logos marquee (mobile/tablet only) */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal,
+  .reveal-zoom {
+    opacity: 1;
+    transform: none;
+  }
+}
