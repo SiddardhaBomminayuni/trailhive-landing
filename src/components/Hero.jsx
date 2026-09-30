@@ -2,10 +2,10 @@ import Reveal from './Reveal.jsx'
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden pt-12 pb-16 lg:pt-[63px] lg:pb-[67px]">
+    <section className="overflow-hidden pt-12 pb-16 lg:pt-[63px] lg:pb-[63px]">
       <div className="container-x flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
         <div className="lg:w-[620px] lg:shrink">
-          <Reveal as="h1" className="text-[clamp(3rem,11vw,4.25rem)] leading-none font-bold tracking-[-0.02em] lg:text-[clamp(4rem,6vw,5.3125rem)]">
+          <Reveal as="h1" className="text-[clamp(3rem,11vw,4.25rem)] leading-none font-bold tracking-[-0.02em] lg:tracking-[-0.033em] lg:text-[clamp(4rem,6vw,5.3125rem)]">
             Your Ultimate <br className="hidden min-[420px]:block" />
             Outdoor <br className="hidden min-[420px]:block" />
             Companion

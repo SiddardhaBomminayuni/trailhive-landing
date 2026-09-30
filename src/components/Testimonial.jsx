@@ -13,7 +13,7 @@ export default function Testimonial() {
       <div className="container-x">
         <Reveal as="figure">
           <p className="eyebrow">Testimonial</p>
-          <blockquote className="mt-6 max-w-[1010px] text-[28px] leading-[1.15] font-bold tracking-[-0.02em] sm:text-4xl lg:text-5xl lg:leading-[1.1]">
+          <blockquote className="mt-6 max-w-[1010px] text-[28px] leading-[1.15] font-bold tracking-[-0.01em] lg:tracking-[-0.043em] sm:text-4xl lg:text-5xl lg:leading-[1.1]">
             "TrailHive has completely changed the way I explore the outdoors. The personalized trail recommendations and
             virtual challenges have kept me motivated and engaged with my adventures."
           </blockquote>

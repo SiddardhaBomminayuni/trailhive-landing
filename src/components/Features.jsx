@@ -27,7 +27,7 @@ export default function Features() {
         <div className="container-x flex flex-col gap-10 lg:flex-row lg:gap-0">
           <Reveal className="lg:w-[320px] lg:shrink-0">
             <p className="eyebrow">Features</p>
-            <h2 className="mt-4 text-[32px] leading-[1.2] font-medium sm:text-[38px] lg:mt-6">
+            <h2 className="mt-4 text-[32px] leading-[1.2] font-semibold tracking-[-0.022em] sm:text-[38px] lg:mt-6">
               Stay Active <br className="hidden lg:block" />
               and Healthy
             </h2>

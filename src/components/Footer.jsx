@@ -13,7 +13,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="pt-16 pb-12 lg:pt-20 lg:pb-[85px]">
+    <footer className="pt-16 pb-12 lg:pt-20 lg:pb-[81px]">
       <div className="container-x">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-[231px_230px_239px_1fr] lg:gap-0">
           <a href="#" aria-label="TrailHive home" className="col-span-2 self-start transition-opacity hover:opacity-80 lg:col-span-1">
@@ -61,7 +61,7 @@ export default function Footer() {
           </form>
         </div>
 
-        <div className="mt-14 h-px bg-mint/80 lg:mt-[82px]" />
+        <div className="mt-14 h-px bg-mint/80 lg:mt-[69px]" />
 
         <div className="mt-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between lg:mt-9">
           <div className="flex flex-col gap-4 text-sm leading-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">

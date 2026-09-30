@@ -16,7 +16,7 @@ export default function PhotoTestimonial() {
       <div className="container-x">
         <Reveal as="figure">
           <p className="eyebrow">Testimonial</p>
-          <blockquote className="mt-6 max-w-[790px] text-[28px] leading-[1.15] font-bold sm:text-4xl lg:text-[50px] lg:leading-[1.1]">
+          <blockquote className="mt-6 max-w-[790px] text-[28px] leading-[1.15] font-bold tracking-[-0.007em] sm:text-4xl lg:text-[50px] lg:leading-[1.1]">
             "I love the social networking aspect of TrailHive. It's great to connect with other hikers and bikers and plan
             group events together."
           </blockquote>

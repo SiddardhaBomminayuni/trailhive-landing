@@ -39,7 +39,7 @@ public/images, public/logos  assets exported from the Figma frame
 |---|---|
 | Forest (dark bg / dark text) | `#232E26` |
 | Mint (light bg / light text) | `#D9EFDE` |
-| Fonts | Lato 400/700 · Montserrat 300/500 ("Trusted by" line) |
+| Fonts | Lato 400/700 · Montserrat 300/500, self-hosted in /public/fonts |
 | H1 | 85px / 100% / -2% |
 | Desktop frame | 1440px, content width 1200px, panel radius 40px |
 
